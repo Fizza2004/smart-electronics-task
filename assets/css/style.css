@@ -1,0 +1,273 @@
+@import url(./layout.css);
+
+/*general css*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*-------------MAIN START--------------*/
+
+#cards-section{
+  background-color: linear-gradient(to right, #e6e6e6,rgb(236, 233, 233));
+  padding: 80px 0;
+}
+
+.container{
+  width: 100%;
+  padding: 0 85px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+#cards-section .row{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#cards-section .row .card{
+  box-shadow: 1px 2px 2px 2px #e6e6e6;
+  height: 550px;
+  border-radius: 15px;
+}
+
+#cards-section .card-header{
+  position: relative;
+}
+
+#cards-section .card-header .blue-label-container{
+  position: absolute;
+  background-color: rgb(50, 50, 249);
+  height: 90px;
+  width: 90px;
+  border-radius: 45px;
+  right: 10%;
+  top: 25%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+
+#cards-section .card-header .icon-container{
+  position: absolute;
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  right: 5%;
+  top: 5%;
+}
+
+#cards-section .card-header img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+#cards-section .card-content{
+  width: 100%;
+  text-align: center;
+}
+
+#cards-section .card-info{
+  display: flex;
+  justify-content: center;
+}
+
+
+#cards-section .card-info .left-price-part{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#cards-section .card-info .left-price-part .old-price{
+  text-decoration: line-through;
+  color: lightgray;
+}
+
+#cards-section .card-info .left-price-part .new-price{
+  font-weight: bold;
+}
+
+
+#cards-section .card-info .right-credit-part{
+  background-color: rgb(233, 231, 231);
+  width: 100px;
+  border-radius: 7px;
+  position: relative;
+}
+
+#cards-section .card-info .right-credit-part .inactive{
+  color: gray;
+}
+
+#cards-section .card-info .right-credit-part .active{
+  background-color: rgb(125, 125, 240);
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+#cards-section .card-info .right-credit-part .monthly-price{
+ font-weight: bold;
+ position: absolute;
+ bottom: 13%;
+ left: 25%;
+}
+
+#cards-section .card-info .right-credit-part .top{
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+}
+
+#cards-section .card-action{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+#cards-section .card-action .blue-button button,.white-button button{
+  width: 150px;
+  height: 30px;
+  background-color: rgb(59, 107, 236);
+  color: white;
+  border: none;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+#cards-section .card-action .white-button button{
+  width: 148px;
+  height: 28px;
+  background-color: white;
+  color: rgb(59, 107, 236);
+  border: 1px solid black;
+}
+
+/*------------MAIN ENDS---------------*/
+
+/*------------HEADER STARTS-----------*/
+.navbar{
+  display: flex;
+  padding: 20px;
+  gap: 70px;
+  justify-content: center;
+  align-items: center;
+}
+.navbar .wrapper-input{
+  width: 50%;
+  position: relative;
+}
+
+.navbar .wrapper-input input {
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 25px;
+  border: 1px solid black;
+  font-size: 18px;
+}
+
+.navbar .wrapper-input input::placeholder {
+  font-size: 18px;
+  color: #999;
+}
+
+.navbar .wrapper-input .search-button {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.navbar .wrapper-input .search-button img {
+  width: 20px;
+  height: 20px;
+}
+
+.navbar .nav-icons
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.navbar .nav-icons .nav-contact{
+  font-size: 24px;
+  color: blue;
+  font-weight: bold;
+}
+
+.navbar .nav-icons .nav-contact i{
+  transform: rotate(132deg);
+  margin-left: 20px;
+}
+
+.navbar .nav-icons .nav-action
+{
+  position: relative;
+  gap: 15px;
+  display: flex;
+  margin-top: auto;
+}
+
+.navbar .nav-icons .nav-action > div > i
+{
+  font-size: 24px;
+}
+
+.navbar .nav-icons .nav-action::before
+{
+  content: " ";
+  position: absolute;
+  height: 40px;
+  width: 1px;
+  left: -12px;
+  bottom: 20%;
+  background-color: black;
+}
+
+.navbar .nav-icons .nav-action .nav--items
+{
+  position: relative;
+  display: flex;
+}
+
+
+.navbar .nav-icons .nav-action .nav--items
+{
+  position: relative;
+  display: flex;
+}
+.nav--items > span
+{
+  text-align: center;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  position: absolute;
+  top: -14px;
+  font-size: 17px;
+  background-color: rgba(123, 123, 183, 0.856);
+  left: 15px;
+  color: #FFFFFF;
+}
